@@ -1,0 +1,5 @@
+dist
+nnv.egg-info
+nnv/.ipynb_checkpoints
+nnv/__pycache__
+examples/.ipynb_checkpoints
