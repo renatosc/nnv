@@ -67,7 +67,7 @@ Some useful features that may be added in the future (help is welcome):
 # Citation
 If you use this library and would like to cite it, you can use:
 ```
- R. Cordeiro, "NNV: Neural Network Vizualizer", 2019. [Online]. Available: https://github.com/renatosc/nnv. [Accessed: DD- Month- 20YY].
+ R. Cordeiro, "NNV: Neural Network Visualizer", 2019. [Online]. Available: https://github.com/renatosc/nnv. [Accessed: DD- Month- 20YY].
 ```
 
 or:
@@ -75,7 +75,7 @@ or:
 ```
 @Misc{,
   author = {Renato Cordeiro},
-  title  = {NNV: Neural Network Vizualizer},
+  title  = {NNV: Neural Network Visualizer},
   month  = may,
   year   = {2019},
   note   = {Online; accessed <today>},
