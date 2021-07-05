@@ -16,6 +16,7 @@ from nnv import NNV
 layersList = [
     {"title":"input\n(relu)", "units": 3, "color": "darkBlue"},
     {"title":"hidden 1\n(relu)", "units": 3},
+    {"title":"hidden 2\n(relu)", "units": 3, "edges_color":"red", "edges_width":2},
     {"title":"output\n(sigmoid)", "units": 1,"color": "darkBlue"},
 ]
 
@@ -41,11 +42,11 @@ layers_list = [
     {"title":"input\n(relu)", "units": 300, "color": "darkBlue"},
     {"title":"hidden 1\n(relu)", "units": 150},
     {"title":"hidden 2\n(relu)",  "units": 75},
-    {"title":"Dropout\n(0.5)", "units": 75,"color":"lightGray"},
+    {"title":"Dropout\n(0.5)", "units": 75, "color":"lightGray"},
     {"title":"hidden 4\n(relu)",  "units": 18},
     {"title":"hidden 5\n(relu)",  "units": 9},
     {"title":"hidden 6\n(relu)",  "units": 4},
-    {"title":"output\n(sigmoid)", "units": 1,"color": "darkBlue"},
+    {"title":"output\n(sigmoid)", "units": 1, "color": "darkBlue"},
 ]
 
 

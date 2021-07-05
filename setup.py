@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="nnv",
-    version="0.0.4",
+    version="0.0.5",
     author="Renato Cordeiro",
     author_email="opensource@renatocordeiro.com",
     description="A simple and easy to use tool to visualize Neural Networks.",
