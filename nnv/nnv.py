@@ -42,7 +42,7 @@ class Node(Element):
         return [self.left, self.top - self.height*0.5]
 
     def render(self, m_ax):
-        circle = Circle((self.get_center_x(), self.get_center_y()), self.get_radius(), color=self.color)
+        circle = Circle((self.get_center_x(), self.get_center_y()), self.get_radius(), color=self.color, zorder=10)
         m_ax.add_patch(circle)
         return circle
 
