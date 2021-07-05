@@ -23,7 +23,7 @@ layersList = [
 NNV(layersList).render()
 ```
 
-![alt text](./examples/my_example.png "Example")
+![alt text](./examples/my_example_1.png "Example")
 
 
 
