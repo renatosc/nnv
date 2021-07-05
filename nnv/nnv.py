@@ -52,19 +52,21 @@ def get_edge_positions(from_node, to_node):
     d = to_node.get_edge_in_position()
     return ([o[0], d[0]], [o[1], d[1]])
 
-def connect_nodes(node1, node2, ax):
+def connect_nodes(node1, node2, ax, edges_color, edges_width):
     (a,b) = get_edge_positions(node1, node2)
-    l1 = lines.Line2D(a,b, color="lightGray", linewidth=4)
+    l1 = lines.Line2D(a,b, color=edges_color, linewidth=edges_width)
     ax.add_line(l1)
 
 
 
 class Layer():
-    def __init__(self, left, num_nodes, node_radius, title=None, spacing_nodes = 1, max_num_nodes_visible=None, color="gray", font_size=36):
+    def __init__(self, left, num_nodes, node_radius, title=None, spacing_nodes = 1, max_num_nodes_visible=None, color="gray", font_size=36, edges_color="lightGray", edges_width=4):
         self.nodes = []
         self.top = 0
         self.title = title
         self.font_size = font_size
+        self.edges_color = edges_color
+        self.edges_width = edges_width
         top = 0
 
         self.three_dots = None
@@ -123,7 +125,7 @@ class Layer():
     def fully_connect(self, layer2, mAx):
         for a in self.nodes:
             for b in layer2.nodes:
-                connect_nodes(a,b, mAx)
+                connect_nodes(a,b, mAx, self.edges_color, self.edges_width)
 
 
 class ThreeDots(Layer):
@@ -141,7 +143,7 @@ class NNV():
         self.spacing_layer = spacing_layer
         max_height = 0
         for l in layers_list:
-            layer = Layer(left=left, num_nodes=l["units"], node_radius=node_radius, title=l["title"], color=l.get("color", "gray"), max_num_nodes_visible=max_num_nodes_visible, font_size=font_size, spacing_nodes=spacing_nodes)
+            layer = Layer(left=left, num_nodes=l["units"], node_radius=node_radius, title=l["title"], color=l.get("color", "gray"), max_num_nodes_visible=max_num_nodes_visible, font_size=font_size, spacing_nodes=spacing_nodes, edges_color=l.get("edges_color","lightGray"), edges_width=l.get("edges_width", 4))
             self.layers.append(layer)
             left = layer.get_right() + self.spacing_layer
             max_height = max(max_height, layer.get_height())
